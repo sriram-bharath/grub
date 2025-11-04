@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club Grub Night</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for a cleaner, softer aesthetic -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0F172A', /* Slate-900 */
+                        'card-bg': '#1A2333', /* Slightly less dark */
+                        'accent': '#5B86E5', /* Softer Blue */
+                        'text-light': '#E2E8F0', /* Softer Text */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-bg min-h-screen text-text-light font-sans antialiased flex flex-col">
+
+    <!-- 1. Feature: Navigation Bar (Navbar) -->
+    <nav class="bg-card-bg shadow-lg sticky top-0 z-10 border-b border-gray-700/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+            <!-- Logo/Club Name -->
+            <a href="#" class="text-xl font-bold text-accent tracking-wide">
+                &lt;Club/&gt; Grub Night
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <div class="space-x-4">
+                <a href="#" class="text-gray-400 hover:text-accent text-sm font-medium transition duration-150 hidden sm:inline">Home</a>
+                <a href="#details" class="bg-accent text-white px-3 py-1.5 rounded-lg text-sm font-semibold hover:bg-blue-600 transition duration-150">Details</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto w-full p-4 sm:p-6 lg:p-8 flex-grow space-y-10 py-12">
+        <div class="bg-card-bg p-6 md:p-8 rounded-xl shadow-xl border border-gray-700">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-accent mb-2">
+                Code & Chew: Grub Night!
+            </h1>
+            <p class="text-lg text-gray-300 mb-6">
+                Refuel, relax, and talk code with the club.
+            </p>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-gray-200">
+                <div class="p-3 bg-gray-700/30 rounded-lg">
+                    <p class="text-xs font-semibold uppercase text-accent/80">Date</p>
+                    <p class="text-base font-bold">Fri, Dec 1</p>
+                </div>
+                <div class="p-3 bg-gray-700/30 rounded-lg">
+                    <p class="text-xs font-semibold uppercase text-accent/80">Time</p>
+                    <p class="text-base font-bold">6:30 PM</p>
+                </div>
+                <div class="p-3 bg-gray-700/30 rounded-lg col-span-2 lg:col-span-1">
+                    <p class="text-xs font-semibold uppercase text-accent/80">Location</p>
+                    <p class="text-base font-bold">Room 404 (The Cache)</p>
+                </div>
+                <div class="p-3 bg-gray-700/30 rounded-lg col-span-2 lg:col-span-1">
+                    <p class="text-xs font-semibold uppercase text-accent/80">Food</p>
+                    <p class="text-base font-bold">Pizza & Soda</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Details and Call to Action (Simple Stacked Layout) -->
+        <div id="details" class="space-y-8">
+            
+            <!-- Agenda/Details -->
+            <div class="bg-card-bg p-6 rounded-xl shadow-lg border border-gray-700">
+                <h2 class="text-2xl font-bold text-white border-b pb-3 border-gray-700/70 mb-4">Agenda and Discussion</h2>
+                <p class="text-gray-400 mb-6">
+                    This is an informal session to catch up and plan. No required coding, just good food and better ideas.
+                </p>
+
+                <h3 class="text-lg font-semibold text-accent mb-2">Key Topics</h3>
+                <ul class="text-gray-400 pl-4 space-y-1">
+                    <li class="flex items-center">
+                        <span class="mr-2 text-accent text-lg">&bull;</span> Next Code Challenge Theme
+                    </li>
+                    <li class="flex items-center">
+                        <span class="mr-2 text-accent text-lg">&bull;</span> Member Project Demos (5 min max)
+                    </li>
+                    <li class="flex items-center">
+                        <span class="mr-2 text-accent text-lg">&bull;</span> Planning for the Semester Hackathon
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+    
+    <footer class="bg-card-bg mt-auto border-t border-gray-700/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
+            <div class="text-center md:text-left mb-2 md:mb-0">
+                &copy; 2025 Club Internal Event.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
